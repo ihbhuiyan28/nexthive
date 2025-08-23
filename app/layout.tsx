@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: "nexthive",
@@ -13,8 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        {children}
+      <body className={`container mx-auto antialiased`}>
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
