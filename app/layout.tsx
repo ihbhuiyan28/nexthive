@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
+import Providers from './providers';
 
 export const metadata: Metadata = {
   title: "nexthive",
@@ -18,7 +19,9 @@ export default function RootLayout({
       <body className={`container mx-auto antialiased`}>
         <Navbar />
         <main className="min-h-screen">
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </main>
         <Footer />
       </body>
