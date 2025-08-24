@@ -1,9 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_PUBLISHABLE_DEFAULT_URL;
-
-const supabase = createClient(supabaseUrl!, supabaseKey!);
+import supabase from '@/lib/supabase';
 
 export async function GET(
     _request: Request,
